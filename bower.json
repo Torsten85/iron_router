@@ -1,5 +1,5 @@
 {
-  "name": "Stanalone Iron:Router",
+  "name": "iron_router",
   "main": "iron_router.js",
   "version": "0.0.1",
   "authors": [
