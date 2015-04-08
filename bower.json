@@ -22,6 +22,6 @@
   "dependencies": {
     "jquery": "latest",
     "underscore": "latest",
-    "blaze": "lastest"
+    "blaze": "Torsten85/blaze"
   }
 }
