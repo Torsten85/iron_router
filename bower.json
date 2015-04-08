@@ -1,0 +1,27 @@
+{
+  "name": "Stanalone Iron:Router",
+  "main": "iron_router.js",
+  "version": "0.0.1",
+  "authors": [
+    "Torsten Blindert"
+  ],
+  "description": "Port of Iron:Router",
+  "keywords": [
+    "Blaze",
+    "Iron:Router"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/scripts/lib/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "underscore": "latest",
+    "blaze": "lastest"
+  }
+}
