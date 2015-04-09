@@ -972,7 +972,7 @@ Router = function (options) {                                                   
                                                                                                                   // 42
   Meteor.startup(function () {                                                                                    // 43
     Meteor.defer(function () {                                                                                    // 44
-      if (router.options.autoStart !== false)                                                                     // 45
+      if (router.options.autoStart === true)                                                                     // 45
         router.start();                                                                                           // 46
     });                                                                                                           // 47
   });                                                                                                             // 48
