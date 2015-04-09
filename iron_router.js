@@ -21,6 +21,7 @@ define(function (require) {
 
 
 
+var Spacebars = require('blaze/spacebars');
 var Iron = require('./iron_router/iron/core');
 require('./iron_router/iron/layout');
 var Handler = require('./iron_router/iron/middleware-stack');
