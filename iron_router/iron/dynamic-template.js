@@ -25,6 +25,7 @@ var Blaze = require('blaze');
 var Spacebars = require('blaze/spacebars');
 var Meteor = require('blaze/meteor');
 var _ = require('underscore');
+var $ = require('jquery');
 var Tracker = require('blaze/tracker');
 var Deps = Tracker._Deps;
 var ReactiveVar = require('blaze/reactive-var');

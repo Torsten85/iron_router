@@ -27,6 +27,7 @@ var Meteor = require('blaze/meteor');
 var _ = require('underscore');
 var Tracker = require('blaze/tracker');
 var Deps = Tracker._Deps;
+var $ = require('jquery');
 /* Package-scope variables */
 var urlToHashStyle, urlFromHashStyle, fixHashPath, State, Location;
 
