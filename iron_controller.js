@@ -21,14 +21,14 @@ define(function (require) {
 
 
 
-var Iron = require('./core');
-require('./layout');
-require('./dynamic-template');
+var Iron = require('./iron_core');
+require('./iron_layout');
+require('./iron_dynamic-template');
 var Meteor = require('blaze/meteor');
 var _ = require('underscore');
 var Tracker = require('blaze/tracker');
 var Deps = Tracker._Deps;
-var ReactiveDict = require('../reactive-dict');
+var ReactiveDict = require('./reactive-dict');
 var Template = require('blaze/templating');
 var Blaze = require('blaze');
 var HTML = require('blaze/htmljs');

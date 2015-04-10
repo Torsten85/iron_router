@@ -23,8 +23,8 @@ define(function (require) {
 
 var Tracker = require('blaze/tracker');
 var Deps = Tracker._Deps;
-var Iron = require('./core');
-require('./dynamic-template');
+var Iron = require('./iron_core');
+require('./iron_dynamic-template');
 var Spacebars = require('blaze/spacebars');
 var Meteor = require('blaze/meteor');
 var Template = require('blaze/templating');

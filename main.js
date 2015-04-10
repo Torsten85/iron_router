@@ -22,14 +22,14 @@ define(function (require) {
 
 
 var Spacebars = require('blaze/spacebars');
-var Iron = require('./iron_router/iron/core');
-require('./iron_router/iron/layout');
-var Handler = require('./iron_router/iron/middleware-stack');
-require('./iron_router/iron/url');
-var __iron_location = require('./iron_router/iron/location');
+var Iron = require('./iron_core');
+require('./iron_layout');
+var Handler = require('./iron_middleware-stack');
+require('./iron_url');
+var __iron_location = require('./iron_location');
 var urlToHashStyle = __iron_location.urlToHashStyle;
 var urlFromHashStyle = __iron_location.urlFromHashStyle;
-require('./iron_router/iron/controller');
+require('./iron_controller');
 var _ = require('underscore');
 var Tracker = require('blaze/tracker');
 var Deps = Tracker._Deps;
@@ -1466,7 +1466,7 @@ Template.registerHelper('pathFor', function (options) {                         
   var routeName = routeName || opts.route;                                                                        // 39
   var data = _.extend({}, opts.data || this);                                                                     // 40
                                                                                                                   // 41
-  var route = window.Router.routes[routeName];                                                                           // 42
+  var route = Router.routes[routeName];                                                                           // 42
   warn(route, "pathFor couldn't find a route named " + JSON.stringify(routeName));                                // 43
                                                                                                                   // 44
   if (route) {                                                                                                    // 45
@@ -1507,7 +1507,7 @@ Template.registerHelper('urlFor', function (options) {                          
   var routeName = routeName || opts.route;                                                                        // 80
   var data = _.extend({}, opts.data || this);                                                                     // 81
                                                                                                                   // 82
-  var route = window.Router.routes[routeName];                                                                           // 83
+  var route = Router.routes[routeName];                                                                           // 83
   warn(route, "urlFor couldn't find a route named " + JSON.stringify(routeName));                                 // 84
                                                                                                                   // 85
   if (route) {                                                                                                    // 86
@@ -1548,7 +1548,7 @@ Template.registerHelper('linkTo', new Blaze.Template('linkTo', function () {    
   var hash = opts.hash;                                                                                           // 121
   var routeName = opts.route;                                                                                     // 122
   var data = _.extend({}, opts.data || DynamicTemplate.getParentDataContext(this));                               // 123
-  var route = window.Router.routes[routeName];                                                                           // 124
+  var route = Router.routes[routeName];                                                                           // 124
   var paramKeys;                                                                                                  // 125
                                                                                                                   // 126
   warn(route, "linkTo couldn't find a route named " + JSON.stringify(routeName));                                 // 127
@@ -1879,6 +1879,19 @@ Router.plugins.dataNotFound = function (router, options) {                      
 
 
 
+(function () {
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                //
+// packages/iron:router/lib/global_router.js                                                                      //
+//                                                                                                                //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                                                  //
+Router = new Iron.Router;                                                                                         // 1
+                                                                                                                  // 2
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+}).call(this);
 
 
 
@@ -1917,11 +1930,11 @@ Template["__IronRouterNoRoutes__"] = new Template("Template.__IronRouterNoRoutes
 }).call(this);
 
 
-RouteController._Router = Router;
-RouteController._RouteController = RouteController;
-return {
-  RouteController: RouteController,
-  Router: Iron.Router
-};
+Iron._Router = Router;
+Iron._RouteController = RouteController;
+
+Iron.currentRouter = Router;
+
+return Iron;
 
 });

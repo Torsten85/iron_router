@@ -31,7 +31,7 @@ var Deps = Tracker._Deps;
 var ReactiveVar = require('blaze/reactive-var');
 var Template = require('blaze/templating');
 var Random = require('blaze/random');
-var Iron = require('./core');
+var Iron = require('./iron_core');
 var HTML = require('blaze/htmljs');
 /* Package-scope variables */
 var DynamicTemplate;

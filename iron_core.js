@@ -321,7 +321,7 @@ Iron.utils.get = function (obj /*, arguments */) {                              
 };                                                                                              // 278
                                                                                                 // 279
 // make sure Iron ends up in the global namespace                                               // 280
-Iron.utils.global.Iron = Iron;                                                                  // 281
+                                                                  // 281
                                                                                                 // 282
 //////////////////////////////////////////////////////////////////////////////////////////////////
 

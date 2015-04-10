@@ -22,8 +22,8 @@ define(function (require) {
 
 
 var EJSON = require('blaze/ejson');
-var Iron = require('./core');
-require('./url');
+var Iron = require('./iron_core');
+require('./iron_url');
 var Meteor = require('blaze/meteor');
 var _ = require('underscore');
 /* Package-scope variables */

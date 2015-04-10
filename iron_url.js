@@ -23,7 +23,7 @@ define(function (require) {
 
 var Meteor = require('blaze/meteor');
 var _ = require('underscore');
-var Iron = require('./core');
+var Iron = require('./iron_core');
 /* Package-scope variables */
 var compilePath, Url;
 

@@ -21,8 +21,8 @@ define(function (require) {
 
 
 
-var Iron = require('./core');
-require('./url');
+var Iron = require('./iron_core');
+require('./iron_url');
 var Meteor = require('blaze/meteor');
 var _ = require('underscore');
 var Tracker = require('blaze/tracker');
